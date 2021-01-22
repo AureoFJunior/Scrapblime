@@ -16,6 +16,15 @@ namespace Scrapblime
         public Form1()
         {
             InitializeComponent();
+            saveAsAnItem.Click += SaveAsAnItem_Click;
+        }
+
+        private void SaveAsAnItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "Text |*.txt";
+            saveFileDialog1.Title = "Save File";
+            saveFileDialog1.ShowDialog();
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
@@ -62,5 +71,10 @@ namespace Scrapblime
         {
             mov = 0;
         }
+
+
+
+        
+
     }
 }
