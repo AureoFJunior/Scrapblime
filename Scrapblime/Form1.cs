@@ -17,29 +17,67 @@ namespace Scrapblime
         {
             InitializeComponent();
             saveAsAnItem.Click += SaveAsAnItem_Click;
+            saveItem.Click += SaveItem_Click;
+            openItem.Click += OpenItem_Click;
+            
         }
 
-        private void SaveAsAnItem_Click(object sender, EventArgs e)
+        private void OpenItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text |*.txt";
+            openFileDialog.FileName = "default.txt";
+            openFileDialog.Title = "Abrir";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                //Não pegou o arquivo, por isso ele n vai conseguir ler nada
+                //var result = System.IO.File.ReadAllText();
+            }
+        }
+
+        private async void SaveItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private async void SaveAsAnItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Filter = "Text |*.txt";
-            saveFileDialog1.Title = "Save File";
-            saveFileDialog1.ShowDialog();
+            saveFileDialog1.Title = "Salvar";
+            saveFileDialog1.FileName = "default.txt";
+            var content = GetContent();
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                String fileToSave = saveFileDialog1.FileName;
+
+                System.IO.File.WriteAllText(fileToSave, content);
+            }
         }
 
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
+
+        
+
+        private String GetContent()
         {
-            mov = 1;
-            x = e.X;
-            y = e.Y;
+            var contTex = richTextBox1.Text;
+            return contTex;
         }
+
+        
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        private void menuStrip1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mov = 0;
+        }
+
+
+        private void menuStrip1_MouseMove(object sender, MouseEventArgs e)
         {
             if (mov == 1)
             {
@@ -47,34 +85,13 @@ namespace Scrapblime
             }
         }
 
-        private void panel1_MouseUp(object sender, MouseEventArgs e)
-        {
-            mov = 0;
-        }
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        private void menuStrip1_MouseDown(object sender, MouseEventArgs e)
         {
             mov = 1;
             x = e.X;
             y = e.Y;
         }
 
-        private void Form1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (mov == 1)
-            {
-                this.SetDesktopLocation(MousePosition.X - x, MousePosition.Y - y);
-            }
-        }
-
-        private void Form1_MouseUp(object sender, MouseEventArgs e)
-        {
-            mov = 0;
-        }
-
-
-
-        
 
     }
 }

@@ -63,9 +63,69 @@ namespace Scrapblime {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder___Minus_1904666 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder___Minus_1904666", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_arrow_arrows_Expand_fullscreen_maximize_19_6355041 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_arrow_arrows_Expand_fullscreen_maximize-19_6355041", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_arrow_arrows_Expand_fullscreen_maximize_21_6355045 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_arrow_arrows_Expand_fullscreen_maximize-21_6355045", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_btn_Fullscreen_Exit_4698912 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_btn_Fullscreen_Exit_4698912", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_close_4763231 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_close_4763231", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Close_Icon_1398919 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Close_Icon_1398919", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_maximize_expand_large_extensive_increase_3209416 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_maximize-expand-large-extensive-increase_3209416", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
