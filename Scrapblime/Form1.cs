@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Scrapblime
 {
@@ -30,17 +31,22 @@ namespace Scrapblime
             openFileDialog.Title = "Abrir";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                //Não pegou o arquivo, por isso ele n vai conseguir ler nada
-                //var result = System.IO.File.ReadAllText();
+                var file = File.Open(openFileDialog.FileName, System.IO.FileMode.Open);
+                //
+                var str = new StreamReader(file);
+                var result = str.ReadToEnd();
+                //
+                richTextBox1.Text = result.ToString();
             }
         }
 
         private async void SaveItem_Click(object sender, EventArgs e)
         {
+            //string path = Path.GetFullPath(Name);
             
         }
 
-        private async void SaveAsAnItem_Click(object sender, EventArgs e)
+        private void SaveAsAnItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Filter = "Text |*.txt";
@@ -51,7 +57,7 @@ namespace Scrapblime
             {
                 String fileToSave = saveFileDialog1.FileName;
 
-                System.IO.File.WriteAllText(fileToSave, content);
+                File.WriteAllText(fileToSave, content);
             }
         }
 
@@ -76,6 +82,10 @@ namespace Scrapblime
             mov = 0;
         }
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
 
         private void menuStrip1_MouseMove(object sender, MouseEventArgs e)
         {
