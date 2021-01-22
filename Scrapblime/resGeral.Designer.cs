@@ -63,6 +63,16 @@ namespace Scrapblime {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _25231 {
+            get {
+                object obj = ResourceManager.GetObject("25231", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder___Minus_1904666 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder___Minus_1904666", resourceCulture);
@@ -126,6 +136,16 @@ namespace Scrapblime {
         internal static System.Drawing.Bitmap iconfinder_maximize_expand_large_extensive_increase_3209416 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_maximize-expand-large-extensive-increase_3209416", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stretched_1366_768_1122701 {
+            get {
+                object obj = ResourceManager.GetObject("stretched-1366-768-1122701", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
