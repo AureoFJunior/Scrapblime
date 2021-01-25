@@ -24,7 +24,17 @@ namespace Scrapblime
             openItem.Click += OpenItem_Click;
             newItem.Click += NewItem_Click;
             helpItem.Click += HelpItem_Click;
+            customizeToolStripMenuItem.Click += CustomizeToolStripMenuItem_Click;
             
+        }
+
+        private void CustomizeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FontDialog choseFont = new FontDialog();
+            var result = choseFont.ShowDialog();
+            if (result == DialogResult.OK)
+                richTextBox1.Font = choseFont.Font;
+             
         }
 
         private void HelpItem_Click(object sender, EventArgs e)
@@ -45,32 +55,17 @@ namespace Scrapblime
             openFileDialog.Filter = "Text |*.txt|Imagem |*.png";
             openFileDialog.FileName = "default.txt";
             openFileDialog.Title = "Abrir";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                mPath = openFileDialog.FileName;
-                var  a  = new FileInfo(mPath);
-                var b = a.Extension;
-
-                if (b == ".png" || b == ".rtf")
-                {
-                    OpenFileDialog openFileDialog2 = new OpenFileDialog();
-                    openFileDialog2.Filter = "PNG | *.png | JPEG *.jpeg";
-
-                    if (openFileDialog2.ShowDialog() == DialogResult.OK)
-                    {
-                        Clipboard.SetImage(Image.FromFile(openFileDialog2.FileName));
-                        richTextBox1.Paste();
-                    }
-                    var file = File.Open(openFileDialog.FileName, System.IO.FileMode.Open);
-                //
-                var str = new StreamReader(file);
-                var result = str.ReadToEnd();
-                //
-                str.Close();
-                richTextBox1.Text = result.ToString();
-            }
             
-            }
+            var file = File.Open(openFileDialog.FileName, System.IO.FileMode.Open);
+            //
+            var str = new StreamReader(file);
+            var result = str.ReadToEnd();
+            //
+            str.Close();
+            richTextBox1.Text = result.ToString();
+            
+            
+            
         }
 
         private void SaveItem_Click(object sender, EventArgs e)
@@ -113,7 +108,6 @@ namespace Scrapblime
                 
             }
         }
-
 
 
         private String GetContent()

@@ -43,7 +43,6 @@ namespace Scrapblime
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolsTool = new System.Windows.Forms.ToolStripMenuItem();
             this.customizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpTool = new System.Windows.Forms.ToolStripMenuItem();
             this.helpItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -193,8 +192,7 @@ namespace Scrapblime
             // toolsTool
             // 
             this.toolsTool.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.customizeToolStripMenuItem,
-            this.optionsToolStripMenuItem});
+            this.customizeToolStripMenuItem});
             this.toolsTool.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.toolsTool.ForeColor = System.Drawing.Color.Teal;
             this.toolsTool.Name = "toolsTool";
@@ -206,12 +204,6 @@ namespace Scrapblime
             this.customizeToolStripMenuItem.Name = "customizeToolStripMenuItem";
             this.customizeToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.customizeToolStripMenuItem.Text = "&Customize";
-            // 
-            // optionsToolStripMenuItem
-            // 
-            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
-            this.optionsToolStripMenuItem.Text = "&Options";
             // 
             // helpTool
             // 
@@ -307,7 +299,6 @@ namespace Scrapblime
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem toolsTool;
         private System.Windows.Forms.ToolStripMenuItem customizeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpTool;
         private System.Windows.Forms.ToolStripMenuItem helpItem;
         private System.Windows.Forms.PictureBox pictureBox1;
